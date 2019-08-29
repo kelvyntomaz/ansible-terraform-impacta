@@ -1,0 +1,20 @@
+- name: Install Terraform
+  hosts: all
+  tasks:
+    - name: Download terraform
+      get_url:
+        url: https://releases.hashicorp.com/terraform/0.12.5/terraform_0.12.5_linux_amd64.zip
+        dest: /root/terraform_0.12.5_linux_amd64.zip
+
+    - name: Unzip terraform
+      unarchive:
+        src: /root/terraform_0.12.5_linux_amd64.zip
+        dest: /root/
+        remote_src: yes
+
+    - name: Copy terraform to path
+      copy:
+        src: /root/terraform
+        dest: /usr/bin/terraform
+        mode: 0777
+        remote_src: yes
