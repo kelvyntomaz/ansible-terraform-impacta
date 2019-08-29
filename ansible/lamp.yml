@@ -1,1 +1,12 @@
-teste
+name: Install Lamp
+tasks:
+  yum:
+    name: httpd
+    state: latest
+  yum:
+    name: php
+    state: latest
+  yum:
+    name: mariadb
+    state: latest
+    
