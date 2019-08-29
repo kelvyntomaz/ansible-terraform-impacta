@@ -1,0 +1,15 @@
+name: Install Rundeck
+tasks:
+    yum:
+      name: java-1.8.0-openjdk
+      state: latest
+
+    copy:
+      src: Files/rundeck.repo
+      dest: /etc/yum.repos.d/
+
+    yum:
+      name: rundeck
+      state: latest
+    command: service rundeckd start
+    
