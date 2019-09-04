@@ -1,0 +1,27 @@
+- name: Install Jenkins
+  tasks:
+    - name: Install Java 1.8
+      yum:
+        name: java-1.8.0-openjdk
+        state: latest
+
+    - name: Install Repository Jenkins
+      command: curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
+
+    - name: Import key Repository
+      command: rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+
+    - name: Install Jenkins
+      yum:
+        name: jenkins
+        state: latest
+
+    - name: Start Jenkins
+      service:
+        name: jenkins
+        state: started
+
+    - name: Stop Firewalld
+      service:
+        name: firewalld
+        state: stopped
