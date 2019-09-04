@@ -1,0 +1,31 @@
+- name: Install Docker
+  tasks:
+
+    - name: Install Persistent
+      yum:
+        name: yum-utils
+        state: latest
+
+      yum:
+        name: device-mapper-persistent-data
+        state: latest
+
+      yum:
+        name: lvm2
+        state: latest
+
+    - name: Install Repository
+      command: yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+    - name: Install Docker
+      yum:
+        name: docker-ce
+        state: latest
+
+      yum:
+        name: docker-ce-cli
+        state: latest
+
+      yum:
+        name: containerd.io
+        state: latest
