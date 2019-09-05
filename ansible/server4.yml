@@ -5,3 +5,5 @@
     - include: playbooks/docker.yml
 
     - include: playbooks/jenkins.yml
+
+    - include: playbooks/netdata.yml

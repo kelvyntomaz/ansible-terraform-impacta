@@ -1,4 +1,10 @@
+- name: Install Git
+  yum:
+    name: git
+    state: latest
+
+- name: Download Netdata
+  command: git clone https://github.com/netdata/netdata.git --depth=100
+
 - name: Install Netdata
-  tasks:
-    - name: Install Netdata
-      command: bash <(curl -Ss https://my-netdata.io/kickstart.sh)
+  command: bash netdata/netdata-installer.sh --install /opt --dont-wait
