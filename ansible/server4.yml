@@ -1,5 +1,6 @@
 - name: Deploy server04
   hosts: all
+  become: yes
   tasks:
 
     - include: playbooks/docker.yml

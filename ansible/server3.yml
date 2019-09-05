@@ -1,5 +1,6 @@
 - name: Deploy server03
   hosts: all
+  become: yes
   tasks:
 
     - include: playbooks/lamp.yml
