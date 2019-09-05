@@ -1,16 +1,17 @@
-- name: Install Rundeck
-  tasks:
-    - name: Install Java
-      yum:
-        name: java-1.8.0-openjdk
-        state: latest
-    - name: Copy Repository
-      copy:
-        src: Files/rundeck.repo
-        dest: /etc/yum.repos.d/
+- name: Install Java
+  yum:
+    name: java-1.8.0-openjdk
+    state: latest
 
-    - name: Install Rundeck
-      yum:
-        name: rundeck
-        state: latest
-      command: service rundeckd start
+- name: Copy Repository
+  copy:
+    src: rundeck.repo
+    dest: /etc/yum.repos.d/
+
+- name: Install Rundeck
+  yum:
+    name: rundeck
+    state: latest
+
+- name: start rundeck
+  command: service rundeckd start

@@ -1,4 +1,5 @@
 - name: Deploy server02
+  hosts: all
   tasks:
 
     - include: playbooks/terraform.yml
