@@ -1,0 +1,6 @@
+- name: Deploy server02
+  tasks:
+
+    - include: playbooks/terraform.yml
+
+    - include: playbooks/rundeck.yml
