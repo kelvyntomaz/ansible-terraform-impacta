@@ -1,0 +1,7 @@
+- name: Deploy server04
+  hosts: all
+  tasks:
+
+    - include: playbooks/docker.yml
+
+    - include: playbooks/jenkins.yml
