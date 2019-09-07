@@ -8,3 +8,7 @@
     - include: playbooks/rundeck.yml
 
     - include: playbooks/netdata.yml
+
+    - include: playbooks/rsyslog.yml
+
+    - include: playbooks/stop_firewalld.yml

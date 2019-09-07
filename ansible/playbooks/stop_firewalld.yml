@@ -1,0 +1,4 @@
+- name: stop Firewalld
+  service:
+    name: firewalld
+    state: stopped
