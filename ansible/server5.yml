@@ -1,8 +1,7 @@
-- name: Deploy server03
+- name: Deploy server04
   hosts: all
   become: yes
   tasks:
 
-    - include: playbooks/lamp.yml
 
     - include: playbooks/netdata.yml

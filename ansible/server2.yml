@@ -6,3 +6,5 @@
     - include: playbooks/terraform.yml
 
     - include: playbooks/rundeck.yml
+
+    - include: playbooks/netdata.yml
