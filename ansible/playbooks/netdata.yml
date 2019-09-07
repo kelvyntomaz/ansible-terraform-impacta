@@ -23,3 +23,5 @@
 
 - name: Install Netdata
   shell: /opt/netdata_git/netdata-installer.sh --install /opt --dont-wait
+  args:
+    chdir: /opt/netdata_git/
