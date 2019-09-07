@@ -1,3 +1,7 @@
+- name: Install Git
+  yum:
+    name: git
+    state: latest
 
 - name: Download terraform
   get_url:
