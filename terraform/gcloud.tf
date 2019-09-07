@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = "${file ("/home/vagrant/chave-gcloud.json")}"
+  credentials = "${file ("/home/ec2-user/chave-gcloud.json")}"
   project = "iron-atom-193017"
   region = "us-east1"
 }
