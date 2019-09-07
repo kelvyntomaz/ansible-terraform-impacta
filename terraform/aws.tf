@@ -9,9 +9,9 @@ resource "aws_s3_bucket" "bucket-aws" {
 }
 
 #resource "aws_instance" "ec2-aws" {
-  ami           = "PEGAR A AMI CORRETA DE UMA COM O DOCKER"
+  ami           = "ami-00eb20669e0990cb4"
   instance_type = "t2.micro"
-  key_name = "GERAR O NOME DA CHAVE"
+  key_name = "Projeto-Yuri.pem"
   tags {
     Name = "Impacta - Kelvyn e Michell"
   }
