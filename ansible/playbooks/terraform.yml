@@ -25,3 +25,16 @@
     dest: /usr/bin/terraform
     mode: 0777
     remote_src: yes
+
+- name: Copy credentials Gcloud
+  copy:
+    src: /home/ec2-user/chave-gcloud.json
+    dest: /home/ec2-user/chave-gcloud.json
+
+- name: Copy Credentials aws
+  copy:
+    src: /home/ec2-user/.aws/credentials
+    dest: /home/ec2-user/.aws/credentials
+
+- name: Git clone Repository
+  command: git clone https://github.com/kelvyntomaz/ansible-terraform-impacta.git /home/ansibe
