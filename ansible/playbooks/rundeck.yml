@@ -13,8 +13,8 @@
     name: rundeck
     state: latest
 
+- name: Configure Rundeck
+  shell: sudo sed -i "s#localhost#`ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'`#g" /etc/rundeck/rundeck-config.properties
+
 - name: start rundeck
   command: service rundeckd start
-
-
-sudo sed -i "s#localhost#`ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'`#g" /etc/rundeck/rundeck-config.properties
