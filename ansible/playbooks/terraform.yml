@@ -29,7 +29,12 @@
 - name: Copy credentials Gcloud
   copy:
     src: /home/ec2-user/chave/gcloud.json
-    dest: /home/ec2-user/gcloud.json
+    dest: /home/ec2-user/chave-gcloud.json
+
+- name: Create Aws Directory'
+  file:
+    path: /home/ec2-user/.aws/
+    state: directory
 
 - name: Copy Credentials aws
   copy:
