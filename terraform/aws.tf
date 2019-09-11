@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "bucket-aws" {
 resource "aws_instance" "ec2-aws" {
   ami           = "ami-00eb20669e0990cb4"
   instance_type = "t2.micro"
-  key_name = "Projeto-Yuri.pem"
+  key_name = "Projeto-Yuri"
 
   tags = {
     Name = "Impacta - Kelvyn e Michell"
