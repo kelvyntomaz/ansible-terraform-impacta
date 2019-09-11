@@ -28,12 +28,12 @@
 
 - name: Copy credentials Gcloud
   copy:
-    src: /home/ec2-user/chave-gcloud.json
-    dest: /home/ec2-user/chave-gcloud.json
+    src: /home/ec2-user/chave/gcloud.json
+    dest: /home/ec2-user/gcloud.json
 
 - name: Copy Credentials aws
   copy:
-    src: /home/ec2-user/.aws/credentials
+    src: /home/ec2-user/chave/aws
     dest: /home/ec2-user/.aws/credentials
 
 - name: Git clone Repository

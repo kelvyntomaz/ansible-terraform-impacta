@@ -5,7 +5,7 @@ DIRECTORY_FILE="/tmp/"
 FILENAME="README"
 AWS_S3_NAME="impacta-kelvyn-michell-aws"
 GCLOUD_STORAGE_NAME="impacta-kelvyn-michell-gcloud"
-GCLOUD_KEY="/home/vagrant/gcloud.json"
+GCLOUD_KEY="/home/ec2-user/chave-gcloud.json"
 
 gcloud auth activate-service-account --key-file=${GCLOUD_KEY}
 
