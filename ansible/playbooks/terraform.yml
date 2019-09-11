@@ -42,4 +42,4 @@
     dest: /home/ec2-user/.aws/credentials
 
 - name: Git clone Repository
-  command: git clone https://github.com/kelvyntomaz/ansible-terraform-impacta.git /home/ansible/ansible-terraform-impacta
+  command: git clone https://github.com/kelvyntomaz/ansible-terraform-impacta.git /home/ec2-user/ansible-terraform-impacta
