@@ -1,0 +1,33 @@
+- name: Install wget
+  yum:
+    name: wget
+    state: latest
+
+- name: Install Epel
+  yum:
+    name: epel-release
+    state: latest
+
+- name: Install python36
+  yum:
+    name: python36
+    state: latest
+
+- name: Download pip
+  command: wget https://bootstrap.pypa.io/get-pip.py -O /tmp/get-pip.py
+
+- name: Install pip
+  command: python3 /tmp/get-pip.py
+
+- name: Install Aws cli
+  command: /usr/local/bin/pip install awscli --upgrade
+
+- name: Install Repository gcloud
+  copy:
+    src: gcloud.repo
+    dest: /etc/yum.repos.d/
+
+- name: Install Gcloud Sdk
+  yum:
+    name: google-cloud-sdk
+    state: latest
