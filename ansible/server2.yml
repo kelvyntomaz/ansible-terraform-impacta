@@ -11,4 +11,6 @@
 
     - include: playbooks/rsyslog.yml
 
+    - include: playbooks/cloud_sdk.yml
+
     - include: playbooks/stop_firewalld.yml
